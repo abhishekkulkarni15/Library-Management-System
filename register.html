@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Register</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">UTD Library</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">Home</a></li>
+        <li class="active"><a href="register.html">Register</a></li>
+        <li><a href="book.html">CheckIn/CheckOut</a></li>
+        <li><a href="fines.html">Fines</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+    <h2>Register</h2>
+    <form action="register.php" class="form-horizontal jumbotron col-sm-6">
+      <div class="form-group">
+        <label class="col-sm-2" for="name">Name</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="name" placeholder="Enter Name" name="name" required="yes">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-sm-2" for="ssn">SSN</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="ssn" placeholder="Enter SSN [XXXXXXXXXX]" name="ssn" required="yes" maxlength="12">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-sm-2" for="address">Address</label>
+        <div class="col-sm-10">          
+          <input type="text" class="form-control" id="address" placeholder="Enter Address" name="address" required="yes">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-sm-2" for="phone">Phone</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="phone" placeholder="Enter Phone" name="phone" required="yes">
+        </div>
+      </div>
+      <div class="form-group">        
+        <div class="col-sm-offset-2 col-sm-2">
+          <button type="submit" class="btn btn-default">ADD USER</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+</body>
+</html>

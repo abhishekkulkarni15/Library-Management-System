@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>CheckIn/Out</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="main.js"></script>
+</head>
+<body onload="setISBN('isbn')">
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">UTD Library</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="register.html">Register</a></li>
+        <li class="active"><a href="book.html">CheckIn/CheckOut</a></li>
+        <li><a href="fines.html">Fines</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+    <h2>Check In</h2>
+    <div class="row">
+      <div class="jumbotron">
+        <div class="input-group">
+          <input id="searchUserText" type="text" class="form-control" placeholder="Search for Borrower Id">
+          <div class="input-group-btn">
+            <button class="btn btn-default" type="submit" onclick="searchBorrower()">
+              <i class="glyphicon glyphicon-search"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container jumbotron" hidden id="searchUserResult">
+  </div>
+  <div class="container">
+    <h2>Check Out</h2>
+    <form action="checkOut.php" class="form-horizontal jumbotron col-sm-8">
+      <div class="form-group">
+        <label class="col-sm-2" for="cardId">Borrower Id</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="cardId" placeholder="Enter Borrower Id" autocomplete="off" name="cardId" required="yes">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-sm-2" for="bookISBN">ISBN</label>
+        <div class="col-sm-10">
+          <input type="number" class="form-control" id="bookISBN" placeholder="Enter ISBN" name="bookISBN" required="yes" maxlength="15">
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-1">
+          <button type="submit" class="btn btn-default">Check Out</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
